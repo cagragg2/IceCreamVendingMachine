@@ -7,8 +7,8 @@ urlpatterns = patterns('',
 
 	url(r'^(?P<iceCreamID>\d+)/$', views.detail, name='detail'),
 
-	url(r'^login/$', views.login, name='login'),
+	url(r'^/login/$', views.login, name='login'),
 
-	url(r'^cart/$', views.cart, name='cart'),
+	url(r'^/cart/$', views.cart, name='cart'),
 
 )

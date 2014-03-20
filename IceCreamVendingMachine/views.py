@@ -13,11 +13,11 @@ def index(request):
 	return HttpResponse(template.render(context))
 
 def detail(request, iceCreamID):
-    return HttpResponse("You're looking at icecream %s." % iceCreamID)
+    return HttpResponse("You're looking at poll %s." % iceCreamID)
 
 def login(request):
-	return render(request, 'IceCreamVendingMachine/Login.html')
+	return render_to_response('IceCreamVendingMachine/Login.html')
 
 def cart(request):
-	return render(request,'IceCreamVendingMachine/Cart.html')
+	return render_to_response('IceCreamVendingMachine/Cart.html')
 	

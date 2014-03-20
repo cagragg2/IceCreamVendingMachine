@@ -1,7 +1,7 @@
 {% if all_icecreams %}
     <ul>
     {% for ice_cream in all_icecreams %}
-        <li><a href="/IceCreamVendingMachine/		{{ icecream.iceCreamID }}/">{{ ice_cream.flavor }}</a></li>
+        <li><a href="/IceCreamVendingMachine/		{{ ice_cream.icecreamID }}/">{{ ice_cream.flavor }}</a></li>
     {% endfor %}
     </ul>
 {% else %}

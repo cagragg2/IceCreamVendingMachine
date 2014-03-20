@@ -1,9 +1,0 @@
-{% if all_icecreams %}
-    <ul>
-    {% for ice_cream in all_icecreams %}
-        <li><a href="/IceCreamVendingMachine/		{{ icecreamvending.iceCreamID }}/">{{ ice_cream.flavor }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No ice creams are available.</p>
-{% endif %}

@@ -7,7 +7,7 @@ class IceCream(models.Model):
 	iceCreamID.primary_key = True
 	flavor = models.CharField(max_length=30)
 	scoopable = models.CharField(max_length=3)
-	#description = models.CharField(max_length=200)
+	description = models.CharField(max_length = 200)
 
 	def __str__(self):
 		return self.flavor
@@ -39,13 +39,4 @@ class Cart(models.Model):
 
 	def __str__(self):
 		return self.quantity
-
-class SnowCones(models.Model):
-	snowConeID = models.IntegerField(default=0)
-	snowConeID.primary_key = True
-	flavor = models.CharField(max_length=30)
-	description = models.CharField(max_length = 200)
-
-	def __str__(self):
-		return self.flavor
 	
