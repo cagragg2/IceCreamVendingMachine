@@ -1,3 +1,8 @@
 venv
 *.pyc
 staticfiles
+*.log
+*.pot
+local_settings.py
+.idea/
+.directory
