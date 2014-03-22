@@ -17,7 +17,7 @@
 	<!-- Basic Page Needs
    ================================================== -->
 	<meta charset="utf-8">
-	<title>Ice Cream Machine | Login </title>
+	<title>Ice Cream Machine | List of Items Available </title>
     <link rel="shortcut icon" href="./images/favicon.ico"> 
 
 	<!-- Mobile Specific Metas
@@ -73,24 +73,19 @@
 	<!-- Delete everything in this .container and get started on your own site! -->
 
     <!-- Navagation -->
-    <div id="back"><a href="./index.html">Login</a>  |  <a href="./request.html">Request</a></div>
+    <div id="back"><a href="./index.html">Home</a>  |  <a href="./login.html">Login</a>  |  <a href="./request.html">Request</a></div>
 
 	<div class="container2" style="padding: 55px;">
-        <h1><font color= "black">Ice Cream Vending Machine Login</font></h1>
-
-
-        <form>
-            Username : <input type="text" name="username" id="username"><br>
-            Password : <input type="password" name="pwd" id="pwd">
-        </form>
-
-        
-
-        <button type="button" onclick="var value = document.getElementById('username').value;alert(value);"/>Submit</button>
-        <button type="button" onclick="alert('Not Currently Available')"/>Register</button>
-
-	
-    </div><!-- container -->
+     		<h1>List of items in store</h1>
+		<br>
+		<!-- Below this line is dynamically created by Django -->
+	{% for object in IceCream %}
+		<h3>{{ object.flavor }}</h3>
+		<br>
+ 		<button type="button" onclick=""/>Buy</button>
+	{% endfor %}
+   
+    	</div><!-- container -->
 
     <!-- JS
     ================================================== -->

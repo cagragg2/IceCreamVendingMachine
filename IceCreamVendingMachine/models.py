@@ -39,4 +39,13 @@ class Cart(models.Model):
 
 	def __str__(self):
 		return self.quantity
+
+class SnowCone(models.Model):
+	snowConeID = models.IntegerField(default=0)
+	snowConeID.primary_key = True
+	coneFlavor = models.CharField(max_length=30)
+	coneDescription = models.CharField(max_length=200)
+
+	def __str__(self):
+		return self.coneFlavor
 	

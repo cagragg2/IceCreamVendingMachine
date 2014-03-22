@@ -17,7 +17,7 @@
 	<!-- Basic Page Needs
    ================================================== -->
 	<meta charset="utf-8">
-	<title>Ice Cream Machine | Login </title>
+	<title>Ice Cream Machine | List of Ice Cream </title>
     <link rel="shortcut icon" href="./images/favicon.ico"> 
 
 	<!-- Mobile Specific Metas
@@ -73,24 +73,24 @@
 	<!-- Delete everything in this .container and get started on your own site! -->
 
     <!-- Navagation -->
-    <div id="back"><a href="./index.html">Login</a>  |  <a href="./request.html">Request</a></div>
+    <div id="back"> <a href="./index.html">Login</a>  |  <a href="./request.html">Request</a></div>
 
 	<div class="container2" style="padding: 55px;">
-        <h1><font color= "black">Ice Cream Vending Machine Login</font></h1>
+     		<h1>List of All Ice Creams and Snow Cones Available			</h1>
+		<br>
+		<!-- Below this line is dynamically created by Django -->
 
-
-        <form>
-            Username : <input type="text" name="username" id="username"><br>
-            Password : <input type="password" name="pwd" id="pwd">
-        </form>
-
-        
-
-        <button type="button" onclick="var value = document.getElementById('username').value;alert(value);"/>Submit</button>
-        <button type="button" onclick="alert('Not Currently Available')"/>Register</button>
-
-	
-    </div><!-- container -->
+	{% if all_icecreams %}
+    <ul>
+    {% for ice_cream in all_icecreams %}
+        <li><a href="/IceCreamVendingMachine/ {{ ice_cream.icecreamID }}/">{{ ice_cream.flavor }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No ice creams are available.</p>
+{% endif %}
+   
+    	</div><!-- container -->
 
     <!-- JS
     ================================================== -->
